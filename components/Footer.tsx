@@ -1,0 +1,119 @@
+import React from 'react'
+import Image from 'next/image'
+import logo from "../public/logo.png"
+
+const Footer = () => {
+    return (
+        <footer className="text-gray-600 bg-[#222e3a] body-font">
+            <div className="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+           
+                <div className="flex-grow flex flex-wrap  -mb-10 md:text-left text-center order-first mx-auto">
+                    <div className="lg:w-1/5 md:w-1/2 w-full ">
+                        <h2 className="title-font  text-gray-600 font-semibold tracking-widest text-xl mb-3  text-center">MENU</h2>
+                        <nav className="list-none mb-10 text-center">
+                            <li className='my-4'>
+                                <a className="text-white ">Veg Pizza</a>
+                            </li>
+                            <li className='my-4'>
+                                <a className="text-white ">Chicken Pizza</a>
+                            </li>
+                            <li className='my-4'>
+                                <a className="text-white ">Pasta</a>
+                            </li>
+                            <li className='my-4'>
+                                <a className="text-white ">Pizza Crust</a>
+                            </li>
+                            <li className='my-4'>
+                                <a className="text-white ">Beverages</a>
+                            </li>
+                            <li className='my-4'>
+                                <a className="text-white ">Pizza Mania</a>
+                            </li>
+                            <li className='my-4'>
+                                <a className="text-white ">Burger Pizza</a>
+                            </li>
+                        </nav>
+                    </div>
+                    <div className="lg:w-1/5 md:w-1/2 w-full ">
+                        <h2 className="title-font  text-gray-600 font-semibold tracking-widest text-xl mb-3 text-center">COMPANY</h2>
+                        <nav className="list-none mb-10 text-center">
+                            <li className='my-4'>
+                                <a className="text-white">First Link</a>
+                            </li>
+                            <li className='my-4'>
+                                <a className="text-white">Second Link</a>
+                            </li>
+                            <li className='my-4'>
+                                <a className="text-white">Third Link</a>
+                            </li>
+                            <li className='my-4'>
+                                <a className="text-white">Fourth Link</a>
+                            </li>
+                        </nav>
+                    </div>
+                    <div className="lg:w-1/5 md:w-1/2 w-full ">
+                        <h2 className="title-font  text-gray-600 font-semibold tracking-widest text-xl mb-3 text-center">PIZZA RESTAURANTS</h2>
+                        <nav className="list-none mb-10 text-center">
+                            <li className='my-4'>
+                                <a className="text-white">First Link</a>
+                            </li>
+                            <li className='my-4'>
+                                <a className="text-white">Second Link</a>
+                            </li>
+                            <li className='my-4'>
+                                <a className="text-white">Third Link</a>
+                            </li>
+                            <li className='my-4'>
+                                <a className="text-white">Fourth Link</a>
+                            </li>
+                        </nav>
+                    </div>
+                    <div className="lg:w-1/5 md:w-1/2 w-full ">
+                        <h2 className="title-font  text-gray-600 font-semibold tracking-widest text-xl mb-3 text-center">ABOUT</h2>
+                        <nav className="list-none mb-10 text-center">
+                            <li className='my-4'>
+                                <a className="text-white">First Link</a>
+                            </li>
+                            <li className='my-4'>
+                                <a className="text-white">Second Link</a>
+                            </li>
+                            <li className='my-4'>
+                                <a className="text-white">Third Link</a>
+                            </li>
+                            <li className='my-4'>
+                                <a className="text-white">Fourth Link</a>
+                            </li>
+                        </nav>
+                    </div>
+                    <div className="lg:w-1/5 md:w-1/2 w-full ">
+                        <h2 className="title-font  text-gray-600 font-semibold tracking-widest text-xl mb-3 text-center">LEGAL</h2>
+                        <nav className="list-none mb-10 text-center">
+                            <li className='my-4'>
+                                <a className="text-white">First Link</a>
+                            </li>
+                            <li className='my-4'>
+                                <a className="text-white">Second Link</a>
+                            </li>
+                            <li className='my-4'>
+                                <a className="text-white">Third Link</a>
+                            </li>
+                            <li className='my-4'>
+                                <a className="text-white">Fourth Link</a>
+                            </li>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <div className="bg-[#1a2735]">
+                <div className="container mx-auto py-4  flex flex-wrap flex-col sm:flex-row">
+                    <div className="text-[#5c6f83] text-center w-full ">
+                        <p>All Rights Reserved. Copyright © Jubilant FoodWorks Ltd. </p>
+                    </div>
+                   
+                </div>
+            </div>
+        </footer>
+    )
+}
+
+export default Footer
