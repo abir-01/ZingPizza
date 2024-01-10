@@ -7,15 +7,25 @@ export const GET_USER = gql`
             email
             name
             phone
-            orders{
-                item_name
-                order_total
+            address{
+                city
+                locality
+                state
+                pincode
             }
-            address
+            orders{                
+                item_names
+                quantity
+                order_total                
+            }
             role
         }
     }
 `
+// # orders{
+// #     item_names
+// #     order_total
+// # }
 export const GET_USERS = gql`
     query Users{
         users{
@@ -24,7 +34,7 @@ export const GET_USERS = gql`
         name
         phone
             orders{
-            item_name
+            item_names
             order_total
             }
         address
@@ -79,7 +89,7 @@ export const GET_ORDER = gql`
     query GetOrder($id:ID!){
         getOrder(id:$id){
             id
-            item_name
+            item_names
             user
             user_id
             order_total

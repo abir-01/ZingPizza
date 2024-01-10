@@ -3,7 +3,6 @@ type User{
     id:ID
     email:String
     name:String
-    password:String
     phone:Int
     orders:[Order]
     role:Role!
@@ -12,13 +11,14 @@ type User{
 
 type Order{
     id:ID
-    item_name: String
+    item_names:[String]
+    quantity:[Int]
   user:User
   user_id:String
   order_total:Int
   delivery_status:String
   address:Address
-    addr_id:String
+  addr_id:String
 }
 
 type Address{
@@ -29,7 +29,7 @@ type Address{
   city:String
   locality:String
   pincode:Int
-  order:Order
+    order:[Order]
 }
 
 type Menu{
@@ -79,13 +79,13 @@ type Query{
 
 type Mutation{
     addUser(email:String, name:String, password:String, phone:Int) : User    
-    addOrder(item_name:String, user_id:String, order_total:Int, addr_id:String) : Order
-    updateOrder(id:ID, item_name:String, user_id:String, order_total:Int, addr_id:String) : Order
-    deleteOrder(id:ID) : Order   
-    addAddress(user_id:ID, state:String,city:String,pincode:Int,locality:String):Address
-    updateAddress(id:ID, state:String,city:String,pincode:Int,locality:String):Address
+    addOrder(item_names:[String],quantity:[Int], user_id:String, order_total:Int, addr_id:String) : Order
+    updateOrder(id:String, item_names:String, quantity:[Int], user_id:String, order_total:Int, addr_id:String) : Order
+    deleteOrder(id:String) : Order   
+    addAddress(user_id:String, state:String,city:String,pincode:String,locality:String):Address
+    updateAddress(id:String, state:String,city:String,pincode:Int,locality:String):Address
     addMenu(item_name:String, category:String, description:String, crust_id:String, size_id:String):Menu
-    updateMenu(id:ID,item_name:String, category:String, description:String, crust_id:String, size_id:String):Menu
+    updateMenu(id:String,item_name:String, category:String, description:String, crust_id:String, size_id:String):Menu
     addSize(regular:Int, medium:Int, large:Int):Size
     updateSize(id:ID, regular:Int, medium:Int, large:Int):Size
     addCrust(new_hand_tossed:Int,wheat_thin_crust :Int, cheese_burst:Int,fresh_pan_pizza: Int):Crust

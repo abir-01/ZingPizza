@@ -23,7 +23,7 @@ const CheckoutItem = ({ item }: any) => {
 
     }
 
-    console.log(item)
+    // console.log(item)
     return (
         <div className="flex shadow-[0_3px_10px_rgb(0,0,0,0.2)] p-6 my-4">
             <div className='flex'>

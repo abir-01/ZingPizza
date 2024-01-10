@@ -14,34 +14,34 @@ model User {
   id       String   @id @default(uuid())
   email    String   @unique
   name     String?
-  password String
-  phone    Int
+  phone    Int?
   orders   Order[]
-  role     Role     @default(USER)
+  role     Role?     @default(USER)
   address  Address?
 }
 
 model Order {
   id              String @id @default(uuid())
-  item_name       String
+  item_names       String[]
+  quantity        Int[]
   user            User   @relation(fields: [user_id], references: [id])
   user_id         String
   order_total     Int
   delivery_status String @default("DELIVERED")
-  address Address @relation(fields: [addr_id], references: [address_id])
-  addr_id String @unique
+  address Address? @relation(fields: [addr_id], references: [address_id])
+  addr_id String  @default("")
 }
 
 model Address {
   address_id String @id @default(uuid())
-  user       User   @relation(fields: [user_id], references: [id])
-  user_id    String @unique
+  user       User?   @relation(fields: [user_id], references: [id])
+  user_id    String? @unique
   state      String
   city       String
   locality     String
   pincode    Int
   
-  order Order?
+  order Order[]
 }
 
 model Menu {

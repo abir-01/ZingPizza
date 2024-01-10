@@ -8,7 +8,7 @@ export const resolvers = {
                 where: {
                     email: args.email,
                 },
-                include: { orders: true, address: true },
+                include: { orders: true,address:true },
             });
         },
 
@@ -22,8 +22,8 @@ export const resolvers = {
         // get particular order details 
         getOrder: async (_parent: any, _args: any, context: Context) => {
             return await context.prisma.order.findFirst({
-                where:{
-                    id:_args.id
+                where: {
+                    id: _args.id
                 },
                 include: { user: true, address: true },
             });
@@ -67,6 +67,7 @@ export const resolvers = {
                 where: {
                     user_id: parent.id,
                 },
+                
             });
         },
     },
@@ -90,27 +91,43 @@ export const resolvers = {
     Mutation: {
         // add user
         addUser: async (_parent: any, args: any, context: Context) => {
-            return await context.prisma.user.create({
-                data: {
+            return await context.prisma.user.upsert({
+                create: {
                     email: args.email,
                     name: args.name,
-                    password: args.password,
                     phone: args.phone,
                     role: args.role
                 },
+
+                update: {
+
+                },
+                where: {
+                    email: args.email
+                }
+
             });
         },
 
         // add address
         addAddress: async (_parent: any, args: any, context: Context) => {
-            return await context.prisma.address.create({
-                data: {
+            return await context.prisma.address.upsert({
+                create: {
                     user_id: args.user_id,
                     state: args.state,
                     city: args.city,
                     locality: args.locality,
-                    pincode: args.pincode
+                    pincode: parseInt(args.pincode)
                 },
+                update:{
+                    state: args.state,
+                    city: args.city,
+                    locality: args.locality,
+                    pincode: parseInt(args.pincode)
+                },
+                where:{
+                    user_id:args.user_id
+                }
             });
         },
 
@@ -133,7 +150,8 @@ export const resolvers = {
         addOrder: async (_parent: any, args: any, context: Context) => {
             return await context.prisma.order.create({
                 data: {
-                    item_name: args.item_name,
+                    item_names: args.item_names,
+                    quantity: args.quantity,
                     order_total: args.order_total,
                     user_id: args.user_id,
                     addr_id: args.addr_id
@@ -149,7 +167,8 @@ export const resolvers = {
                     id: args.id
                 },
                 data: {
-                    item_name: args.item_name,
+                    item_names: args.item_names,
+                    quantity: args.quantity,
                     order_total: args.order_total,
                     user_id: args.user_id,
                     addr_id: args.addr_id
@@ -173,9 +192,9 @@ export const resolvers = {
                     item_name: args.item_name,
                     category: args.category,
                     description: args.description,
-                    image:args.image,
-                    price:args.price,
-                    food_type:args.food_type
+                    image: args.image,
+                    price: args.price,
+                    food_type: args.food_type
                     // size_id: args.size_id,
                     // crust_id: args.crust_id
                 },
@@ -193,9 +212,9 @@ export const resolvers = {
                     item_name: args.item_name,
                     category: args.category,
                     description: args.description,
-                    image:args.image,
-                    price:args.price,
-                    food_type:args.food_type
+                    image: args.image,
+                    price: args.price,
+                    food_type: args.food_type
                 },
             });
         },
