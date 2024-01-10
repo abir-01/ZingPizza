@@ -10,6 +10,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 import { options } from "./api/auth/[...nextauth]/options"
 import { getServerSession } from "next-auth/next"
 import SessionProvider from "@/utils/SessionProvider";
+import { ApolloWrapper } from "@/graphql/index";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -37,11 +38,14 @@ export default async function RootLayout(
       <body className={inter.className}>
         <Providers>
           <Providers1>
-            <SessionProvider session={session}>
-              <Navbar session={session}/>
-              {children}
-              <Footer />
-            </SessionProvider>
+            <ApolloWrapper>
+
+              <SessionProvider session={session}>
+                <Navbar session={session} />
+                {children}
+                <Footer />
+              </SessionProvider>
+            </ApolloWrapper>
           </Providers1>
         </Providers>
       </body>
