@@ -42,7 +42,7 @@ const Cart = () => {
 
 
     if (flag === 0) {
-        return <div className='w-1/4 bg-white h-[70vh] flex flex-col justify-center items-center shadow-[0_3px_10px_rgb(0,0,0,0.2)] fixed right-5'>
+        return <div className='md:w-1/4 bg-white h-[40vh] bottom-0 md:h-[70vh] flex flex-col justify-center items-center shadow-[0_3px_10px_rgb(0,0,0,0.2)] fixed right-5'>
             < span className='text-gray-500 font-bold text-2xl' > Your Cart is Empty</span >
             <p className='text-gray-500 text-lg'>Please add some items from the menu.</p>
             <Image src={cartimage} alt='cartimage' className='max-w-[40%] absolute right-0 top-0' />
@@ -51,9 +51,9 @@ const Cart = () => {
 
     return (
 
-        <div className='w-1/4 h-[70vh] bg-white flex flex-col overflow-scroll items-center shadow-[0_3px_10px_rgb(0,0,0,0.2)] fixed right-5 no-scrollbar'>
+        <div className='mx-auto w-full md:w-1/4 h-[40vh] md:h-[70vh] bg-white flex flex-col overflow-scroll items-center shadow-[0_3px_10px_rgb(0,0,0,0.2)] fixed right-0 bottom-0 md:right-5 no-scrollbar'>
             <div className='bg-green-500 h-[10px] w-full'></div>
-            <div className="text-2xl font-bold text-center my-4 underline">CART</div>
+            <div className="text-lg md:text-2xl font-bold text-center my-4 underline">CART</div>
             <div className='w-full '>
                 {
                     cartmenu?.map((menu:any, i:any) => (
@@ -61,9 +61,9 @@ const Cart = () => {
                     ))
                 }
             </div>
-            <div className='flex w-full px-8 justify-between py-6'>
-                <div className='text-lg font-bold'>Subtotal</div>
-                <div className='text-xl font-bold'> &#8377; {total}</div>
+            <div className='flex w-full px-4 md:px-8 justify-between py-6'>
+                <div className='text-sm md:text-lg font-bold'>Subtotal</div>
+                <div className='text-sm md:text-xl font-bold'> &#8377; {total}</div>
             </div>
             <Link href="/checkout" className='w-full text-center py-3 bg-green-500 text-white sticky bottom-0'>Checkout</Link>
 

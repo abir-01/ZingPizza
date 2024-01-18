@@ -4,7 +4,7 @@ import React from 'react'
 
 const Menubar = ({scrolltoHash}:any) => {
     return (
-        <div className='bg-[#0067a7] text-sm text-white flex justify-between'  >
+        <div className='bg-[#0067a7] text-sm text-white flex justify-between overflow-scroll'  >
             <div className='mx-4 py-4 cursor-pointer' onClick={() => scrolltoHash('recommended')}>Recommended</div>
             <div className='mx-4 py-4 cursor-pointer'onClick={() => scrolltoHash('new_launches')}>New Launches</div>
             <div className='mx-4 py-4 cursor-pointer'onClick={() => scrolltoHash('veg_pizza')}>Veg Pizza</div>

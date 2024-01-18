@@ -5,8 +5,6 @@ import MenuCard from './MenuCard'
 import { useMutation, useQuery } from "@apollo/client";
 import { GET_ALL_MENU } from "@/graphql/queries";
 import { IMenu } from '@/typings.d'
-// import dynamic from 'next/dynamic';
-// const MenuCard = dynamic(() => import('./MenuCard'));
 
 const MenuCards = () => {
 
@@ -67,20 +65,7 @@ const MenuCards = () => {
 
   }, [menus])
 
-  // useEffect(() => {
-  //   console.log(recommended);
-  //   console.log(new_launches);
-  //   console.log(veg_pizza);
-  //   console.log(non_veg_pizza);
-  //   console.log(beverages);
-  //   console.log(garlicbreads_more);
-  //   console.log(pizza_mania);
-  //   console.log(value_combos);
-  //   console.log(desserts);
-  //   console.log(mealforone);
-  //   console.log(party_combos);
-  //   console.log(noonion_nogarlic);
-  // }, [noonion_nogarlic])
+ 
 
   if (loading)
     return (
@@ -98,14 +83,14 @@ const MenuCards = () => {
   return (
 
 
-    <div className=' w-3/4'>
+    <div className=' md:w-3/4'>
 
       {/* Recommended */}
       <div >
 
-        <div className="relative my-12">
+        <div className="relative my-6 md:my-12">
           <div className='-z-0 border-b-2'></div>
-          <div className="absolute -top-7 mx-8 py-4 px-8 bg-[#0067a7] text-white text-xl rounded-full " id="recommended">Recommended</div>
+          <div className="absolute -top-4 md:-top-7 mx-4 md:mx-8 py-2 md:py-4 px-4 md:px-8 bg-[#0067a7] text-white text-base md:text-xl rounded-full " id="recommended">Recommended</div>
 
         </div>
         {/* <div className='category'>Recommended</div> */}
@@ -124,9 +109,9 @@ const MenuCards = () => {
       {/* New Launches */}
       <div>
 
-        <div className="relative my-12">
+        <div className="relative my-6 md:my-12">
           <div className='-z-0 border-b-2'></div>
-          <div className="absolute -top-7 mx-8 py-4 px-8 bg-[#0067a7] text-white text-xl rounded-full "  id="new_launches">New Launches</div>
+          <div className="absolute -top-4 md:-top-7 mx-4 md:mx-8 py-2 md:py-4 px-4 md:px-8 bg-[#0067a7] text-white text-base md:text-xl rounded-full "  id="new_launches">New Launches</div>
 
         </div>
         {/* <div className='category'>Recommended</div> */}
@@ -142,9 +127,9 @@ const MenuCards = () => {
 
       {/* Veg Pizza */}
       <div >
-        <div className="relative my-12">
+        <div className="relative my-6 md:my-12">
           <div className='-z-0 border-b-2'></div>
-          <div className="absolute -top-7 mx-8 py-4 px-8 bg-[#0067a7] text-white text-xl rounded-full " id="veg_pizza">Veg Pizza</div>
+          <div className="absolute -top-4 md:-top-7 mx-4 md:mx-8 py-2 md:py-4 px-4 md:px-8 bg-[#0067a7] text-white text-base md:text-xl rounded-full " id="veg_pizza">Veg Pizza</div>
 
         </div>
         {/* <div className='category'>Recommended</div> */}
@@ -162,9 +147,9 @@ const MenuCards = () => {
 
       {/* Non Veg Pizza */}
       <div >
-      <div className="relative my-12">
+      <div className="relative my-6 md:my-12">
         <div className='-z-0 border-b-2'></div>
-        <div className="absolute -top-7 mx-8 py-4 px-8 bg-[#0067a7] text-white text-xl rounded-full " id="non_veg_pizza">Non Veg Pizza</div>
+        <div className=" -top-4amd:bsolute -top-7 mx-4 md:mx-8 py-2 md:py-4 px-4 md:px-8 bg-[#0067a7] text-white text-base md:text-xl rounded-full " id="non_veg_pizza">Non Veg Pizza</div>
 
       </div>
       {/* <div className='category'>Recommended</div> */}
@@ -182,9 +167,9 @@ const MenuCards = () => {
 
       {/* Beverages */}
       <div >
-      <div className="relative my-12">
+      <div className="relative my-6 md:my-12">
         <div className='-z-0 border-b-2'></div>
-        <div className="absolute -top-7 mx-8 py-4 px-8 bg-[#0067a7] text-white text-xl rounded-full " id="beverages">Beverages</div>
+        <div className=" -top-4amd:bsolute -top-7 mx-4 md:mx-8 py-2 md:py-4 px-4 md:px-8 bg-[#0067a7] text-white text-base md:text-xl rounded-full " id="beverages">Beverages</div>
 
       </div>
       {/* <div className='category'>Recommended</div> */}
@@ -202,9 +187,9 @@ const MenuCards = () => {
 
       {/* Garlic Breads & More */}
       <div >
-      <div className="relative my-12">
+      <div className="relative my-6 md:my-12">
         <div className='-z-0 border-b-2'></div>
-        <div className="absolute -top-7 mx-8 py-4 px-8 bg-[#0067a7] text-white text-xl rounded-full " id="garlicbreads_more">Garlic Breads & More</div>
+        <div className=" -top-4amd:bsolute -top-7 mx-4 md:mx-8 py-2 md:py-4 px-4 md:px-8 bg-[#0067a7] text-white text-base md:text-xl rounded-full " id="garlicbreads_more">Garlic Breads & More</div>
 
       </div>
 
@@ -222,9 +207,9 @@ const MenuCards = () => {
 
       {/* Pizza Mania */}
       <div >
-      <div className="relative my-12">
+      <div className="relative my-6 md:my-12">
         <div className='-z-0 border-b-2'></div>
-        <div className="absolute -top-7 mx-8 py-4 px-8 bg-[#0067a7] text-white text-xl rounded-full " id="pizza_mania">Pizza Mania</div>
+        <div className=" -top-4amd:bsolute -top-7 mx-4 md:mx-8 py-2 md:py-4 px-4 md:px-8 bg-[#0067a7] text-white text-base md:text-xl rounded-full " id="pizza_mania">Pizza Mania</div>
 
       </div>
 
@@ -242,9 +227,9 @@ const MenuCards = () => {
 
       {/* Value Combos */}
       <div >
-      <div className="relative my-12">
+      <div className="relative my-6 md:my-12">
         <div className='-z-0 border-b-2'></div>
-        <div className="absolute -top-7 mx-8 py-4 px-8 bg-[#0067a7] text-white text-xl rounded-full " id="value_combos">Value Combos</div>
+        <div className=" -top-4amd:bsolute -top-7 mx-4 md:mx-8 py-2 md:py-4 px-4 md:px-8 bg-[#0067a7] text-white text-base md:text-xl rounded-full " id="value_combos">Value Combos</div>
 
       </div>
 
@@ -262,9 +247,9 @@ const MenuCards = () => {
 
       {/* Desserts */}
       <div >
-      <div className="relative my-12">
+      <div className="relative my-6 md:my-12">
         <div className='-z-0 border-b-2'></div>
-        <div className="absolute -top-7 mx-8 py-4 px-8 bg-[#0067a7] text-white text-xl rounded-full " id="desserts">Desserts</div>
+        <div className=" -top-4amd:bsolute -top-7 mx-4 md:mx-8 py-2 md:py-4 px-4 md:px-8 bg-[#0067a7] text-white text-base md:text-xl rounded-full " id="desserts">Desserts</div>
 
       </div>
 
@@ -282,9 +267,9 @@ const MenuCards = () => {
 
       {/* Meal for 1 */}
       <div >
-      <div className="relative my-12">
+      <div className="relative my-6 md:my-12">
         <div className='-z-0 border-b-2'></div>
-        <div className="absolute -top-7 mx-8 py-4 px-8 bg-[#0067a7] text-white text-xl rounded-full " id="mealforone">Meal for 1</div>
+        <div className=" -top-4amd:bsolute -top-7 mx-4 md:mx-8 py-2 md:py-4 px-4 md:px-8 bg-[#0067a7] text-white text-base md:text-xl rounded-full " id="mealforone">Meal for 1</div>
 
       </div>
 
@@ -302,9 +287,9 @@ const MenuCards = () => {
 
       {/* Party Combos */}
       <div >
-      <div className="relative my-12">
+      <div className="relative my-6 md:my-12">
         <div className='-z-0 border-b-2'></div>
-        <div className="absolute -top-7 mx-8 py-4 px-8 bg-[#0067a7] text-white text-xl rounded-full " id="party_combos">Party Combos</div>
+        <div className=" -top-4amd:bsolute -top-7 mx-4 md:mx-8 py-2 md:py-4 px-4 md:px-8 bg-[#0067a7] text-white text-base md:text-xl rounded-full " id="party_combos">Party Combos</div>
 
       </div>
 
@@ -322,9 +307,9 @@ const MenuCards = () => {
 
       {/* No Onion No Garlic */}
       <div >
-      <div className="relative my-12">
+      <div className="relative my-6 md:my-12">
         <div className='-z-0 border-b-2'></div>
-        <div className="absolute -top-7 mx-8 py-4 px-8 bg-[#0067a7] text-white text-xl rounded-full " id="noonion_nogarlic">No Onion No Garlic</div>
+        <div className=" -top-4amd:bsolute -top-7 mx-4 md:mx-8 py-2 md:py-4 px-4 md:px-8 bg-[#0067a7] text-white text-base md:text-xl rounded-full " id="noonion_nogarlic">No Onion No Garlic</div>
 
       </div>
 

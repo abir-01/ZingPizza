@@ -134,9 +134,9 @@ const page = () => {
     return (
         <>
             <Menubar scrolltoHash={scrolltoHash} />
-            <div className="flex mt-20 justify-between container mx-auto">
-                <div className='w-1/2'>
-                    <div className='text-2xl font-bold '>Items</div>
+            <div className="flex flex-col md:flex-row mt-20 justify-between container mx-auto">
+                <div className='md:w-1/2'>
+                    <div className='text-base md:text-2xl font-bold '>Items</div>
                     {
                         cartmenu?.map((menu, i) => (
                             <CheckoutItem item={menu} key={i} />
@@ -144,7 +144,7 @@ const page = () => {
                     }
                 </div>
                 {/* <div className='w-1/3'></div> */}
-                <div className='flex w-1/3 px-8 justify-evenly sticky right-0 py-6'>
+                <div className='flex md:w-1/3 px-8 justify-evenly sticky right-0 py-6'>
                     <div className='text-lg font-bold'>Subtotal</div>
                     <div className='text-xl font-bold'> &#8377; {total}</div>
                 </div>

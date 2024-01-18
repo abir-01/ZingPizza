@@ -21,7 +21,7 @@ const page = () => {
   return (
     <>
       <Menubar scrolltoHash={scrolltoHash} />
-      <div className="flex my-20 container mx-auto">
+      <div className="flex my-10 md:my-20 container mx-auto">
         <MenuCards />
         <Cart/>
       </div>

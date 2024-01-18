@@ -34,8 +34,8 @@ const CartItem = ({item}:any) => {
             <div className='flex justify-between  '>
                 <Image src={item.image} alt="sample" width={100} height={100} />
                 <div className='flex flex-col'>
-                    <p className='font-semibold text-base'>{item.item_name}</p>
-                    <p className='text-sm'>Medium | Hand Tossed</p>
+                    <p className='font-semibold text-sm md:text-base'>{item.item_name}</p>
+                    <p className='text-xs md:text-sm'>Medium | Hand Tossed</p>
                 </div>
             </div>
             <div className="flex justify-between items-center my-4 border-b-2 pb-6">
