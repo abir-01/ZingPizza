@@ -14,6 +14,11 @@ import { useMutation } from "@apollo/client";
 import { ADD_USER } from "@/graphql/mutations";
 import { useSession } from 'next-auth/react'
 import { RedirectType, redirect } from 'next/navigation'
+import dynamic from 'next/dynamic';
+const LazyCoupons = dynamic(() => import('../components/Coupons'));
+const LazyExplore = dynamic(() => import('../components/Explore'));
+const LazyExclusive = dynamic(() => import('../components/ExclusiveOffers'));
+const LazyMainText = dynamic(() => import('../components/MainText'));
 
 const page =  () => {
 
@@ -32,10 +37,11 @@ const page =  () => {
   return (
     <>
       <Banner />
-      <Coupons />
-      <Explore />
-      <ExclusiveOffers />
-      <MainText />
+      {/* <Coupons /> */}
+      <LazyCoupons/>
+      <LazyExplore />
+      <LazyExclusive />
+      <LazyMainText />
     </>
   )
 }
