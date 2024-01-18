@@ -1,11 +1,11 @@
 import React from 'react'
 import Image from 'next/image'
-import offer1 from "../public/Offer1.jpg"
-import offer2 from "../public/Offer2.jpg"
-import offer3 from "../public/Offer3.jpg"
-import offer4 from "../public/Offer4.jpg"
-import offer5 from "../public/Offer5.jpg"
-import offer6 from "../public/Offer6.jpg"
+import offer1 from "../public/Offer1.webp"
+import offer2 from "../public/Offer2.webp"
+import offer3 from "../public/Offer3.webp"
+import offer4 from "../public/Offer4.webp"
+import offer5 from "../public/Offer5.webp"
+import offer6 from "../public/Offer6.webp"
 
 const Coupons = () => {
   return (

@@ -35,7 +35,7 @@ export default async function RootLayout(
 
     <html lang="en">
       <head>
-        <link rel="icon" href="/favicon.png" type="image/x-icon" />
+        <link rel="icon" href="/favicon.webp" type="image/x-icon" />
       </head>
       <body className={inter.className}>
         <Providers>

@@ -5,6 +5,8 @@ import MenuCard from './MenuCard'
 import { useMutation, useQuery } from "@apollo/client";
 import { GET_ALL_MENU } from "@/graphql/queries";
 import { IMenu } from '@/typings.d'
+// import dynamic from 'next/dynamic';
+// const MenuCard = dynamic(() => import('./MenuCard'));
 
 const MenuCards = () => {
 

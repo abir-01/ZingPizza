@@ -1,8 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
 import exclusiveoffers from "../public/exclusiveoffers.png"
-import applestore from "../public/applestore.png"
-import playstore from "../public/playstore.png"
+import applestore from "../public/applestore.webp"
+import playstore from "../public/playstore.webp"
 
 const ExclusiveOffers = () => {
   return (

@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useEffect, useState } from 'react'
-import cartimage from '@/public/CartImage.png'
+import cartimage from '@/public/CartImage.webp'
 import Image from 'next/image'
 import type { RootState } from '../app/GlobalRedux/store';
 import { useSelector, useDispatch } from 'react-redux';

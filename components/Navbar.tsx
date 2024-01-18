@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import React from 'react'
-import logo from "../public/logo.png"
+import logo from "../public/logo.webp"
 import Link from 'next/link'
 import { signOut } from "next-auth/react"
 
@@ -17,7 +17,7 @@ const Navbar = ({ session }: any) => {
         <header className="text-gray-600 body-font shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]">
             <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
                 <Link href="/" className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-                    <Image src={logo} alt="logo" height={60} width={200}></Image>
+                    <Image src={logo} alt="logo" height={60} width={200} priority></Image>
                 </Link>
                 <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base font-bold justify-center">
                     <Link prefetch href="/menu" className="mr-5 hover:text-gray-900">Our Menu</Link>

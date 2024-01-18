@@ -1,7 +1,7 @@
 "use client";
 // "use server"
 
-import { ApolloLink, HttpLink } from "@apollo/client";
+import { ApolloLink, HttpLink,InMemoryCache } from "@apollo/client";
 import {
   ApolloNextAppProvider,
   NextSSRApolloClient,
@@ -15,7 +15,7 @@ function makeClient() {
   });
 
   return new NextSSRApolloClient({
-    cache: new NextSSRInMemoryCache(),
+    cache: new InMemoryCache(),
     link:
       typeof window === "undefined"
         ? ApolloLink.from([

@@ -1,9 +1,9 @@
 import React from 'react'
-import image1 from "../../public/virtual_party.png"
+import image1 from "../../public/virtual_party.webp"
 import Image from 'next/image'
-import image2 from "../../public/corporate_2.png"
-import image4 from "../../public/corporate_4.png"
-import image3 from "../../public/image3.png"
+import image2 from "../../public/corporate_2.webp"
+import image4 from "../../public/corporate_4.webp"
+import image3 from "../../public/image3.webp"
 
 const page = () => {
   return (

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import bannerimage from "../public/banner.png"
+import bannerimage from "../public/banner.webp"
 
 const Banner = () => {
     return (
@@ -16,7 +16,7 @@ const Banner = () => {
                     </div>
                 </div>
             </div>
-            <Image src={bannerimage} alt="banner-image" className='w-3/5'/>
+            <Image src={bannerimage} alt="banner-image" className='w-3/5' priority placeholder='blur'/>
         </div>
     )
 }

@@ -1,9 +1,9 @@
 import React from 'react'
 import Image from 'next/image'
-import party from "../public/party.png"
-import nearbystore from "../public/nearbystore.png"
-import menu from "../public/menu.png"
-import catering from "../public/catering.png"
+import party from "../public/party.webp"
+import nearbystore from "../public/nearbystore.webp"
+import menu from "../public/menu.webp"
+import catering from "../public/catering.webp"
 
 const Explore = () => {
     return (

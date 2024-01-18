@@ -1,17 +1,11 @@
 "use client"
 
-import React, { useEffect, useState } from 'react'
-import { Fragment } from 'react'
-import { Menu, Transition } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
+import React, {  useState } from 'react'
 import { IMenu } from "@/typings.d";
 import Image from 'next/image';
 import type { persistor } from '../app/GlobalRedux/store';
-
-
-import type { RootState } from '../app/GlobalRedux/store';
 import { useSelector, useDispatch } from 'react-redux';
-import { add, remove } from '../app/GlobalRedux/Features/CartMenu/cartmenu';
+import { add } from '../app/GlobalRedux/Features/CartMenu/cartmenu';
 import Link from 'next/link'
 
 
@@ -27,12 +21,6 @@ const MenuCard = ({ menu }: Props) => {
     const dispatch = useDispatch();
     const [count, setcount] = useState(1);
 
-
-    // useEffect(() => {
-    //     console.log("Cart = " + cart);
-
-    // }, [cart])
-
     const handleClick = (e: any) => {
         e.preventDefault();
         const obj = {
@@ -44,15 +32,10 @@ const MenuCard = ({ menu }: Props) => {
             "description":menu.description
         }
 
-        // console.log(obj.menu_id);
-
         dispatch(add(obj));
     }
 
     return (
-        // <section className="text-gray-600 body-font">
-        //     <div className="container px-5 py-24 mx-auto">
-        //         <div className="flex flex-wrap -m-4">
         <div className="lg:w-80 mr-auto my-4 md:w-1/2 p-4 w-full menucard shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
             <Link href="" className="block relative h-48 rounded overflow-hidden">
                 <Image alt="menucardimage" className="object-cover object-center w-full h-full block" src={menu.image} layout='fill' />
