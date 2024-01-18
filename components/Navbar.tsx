@@ -11,7 +11,7 @@ const Navbar = ({ session }: any) => {
 
     // console.log(session)
     const user = session?.user;
-    console.log(user);
+    // console.log(user);
 
     return (
         <header className="text-gray-600 body-font shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]">

@@ -65,20 +65,20 @@ const MenuCards = () => {
 
   }, [menus])
 
-  useEffect(() => {
-    console.log(recommended);
-    console.log(new_launches);
-    console.log(veg_pizza);
-    console.log(non_veg_pizza);
-    console.log(beverages);
-    console.log(garlicbreads_more);
-    console.log(pizza_mania);
-    console.log(value_combos);
-    console.log(desserts);
-    console.log(mealforone);
-    console.log(party_combos);
-    console.log(noonion_nogarlic);
-  }, [noonion_nogarlic])
+  // useEffect(() => {
+  //   console.log(recommended);
+  //   console.log(new_launches);
+  //   console.log(veg_pizza);
+  //   console.log(non_veg_pizza);
+  //   console.log(beverages);
+  //   console.log(garlicbreads_more);
+  //   console.log(pizza_mania);
+  //   console.log(value_combos);
+  //   console.log(desserts);
+  //   console.log(mealforone);
+  //   console.log(party_combos);
+  //   console.log(noonion_nogarlic);
+  // }, [noonion_nogarlic])
 
   if (loading)
     return (

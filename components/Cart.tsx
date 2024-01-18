@@ -23,7 +23,7 @@ const Cart = () => {
         cartmenu.forEach((menu:any) => {
 
             const menu1 = JSON.stringify(menu);
-            console.log(menu1, typeof (JSON.parse(menu1).price))
+            // console.log(menu1, typeof (JSON.parse(menu1).price))
 
             if (Number.isNaN(total))
                 total2 = JSON.parse(menu1).price * JSON.parse(menu1).count
@@ -34,9 +34,9 @@ const Cart = () => {
 
     }, [cartmenu])
 
-    useEffect(() => {
-        console.log(total);
-    }, [total])
+    // useEffect(() => {
+    //     console.log(total);
+    // }, [total])
 
 
     if (flag === 0) {

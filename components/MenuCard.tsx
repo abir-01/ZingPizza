@@ -28,10 +28,10 @@ const MenuCard = ({ menu }: Props) => {
     const [count, setcount] = useState(1);
 
 
-    useEffect(() => {
-        console.log("Cart = " + cart);
+    // useEffect(() => {
+    //     console.log("Cart = " + cart);
 
-    }, [cart])
+    // }, [cart])
 
     const handleClick = (e: any) => {
         e.preventDefault();
@@ -44,7 +44,7 @@ const MenuCard = ({ menu }: Props) => {
             "description":menu.description
         }
 
-        console.log(obj.menu_id);
+        // console.log(obj.menu_id);
 
         dispatch(add(obj));
     }
