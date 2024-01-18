@@ -12,6 +12,7 @@ import type { persistor } from '../app/GlobalRedux/store';
 import type { RootState } from '../app/GlobalRedux/store';
 import { useSelector, useDispatch } from 'react-redux';
 import { add, remove } from '../app/GlobalRedux/Features/CartMenu/cartmenu';
+import Link from 'next/link'
 
 
 type Props = {
@@ -53,9 +54,9 @@ const MenuCard = ({ menu }: Props) => {
         //     <div className="container px-5 py-24 mx-auto">
         //         <div className="flex flex-wrap -m-4">
         <div className="lg:w-80 mr-auto my-4 md:w-1/2 p-4 w-full menucard shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
-            <a className="block relative h-48 rounded overflow-hidden">
-                <img alt="menucardimage" className="object-cover object-center w-full h-full block" src={menu.image} />
-            </a>
+            <Link href="" className="block relative h-48 rounded overflow-hidden">
+                <Image alt="menucardimage" className="object-cover object-center w-full h-full block" src={menu.image} layout='fill' />
+            </Link>
             <div className="mt-4 flex justify-between">
                 <div>
                     <h3 className="text-gray-900 text-base tracking-widest title-font font-semibold mb-1">{menu.item_name}</h3>

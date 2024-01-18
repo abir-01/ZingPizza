@@ -32,7 +32,7 @@ const CartItem = ({item}:any) => {
         <div className='p-4 w-full'>
 
             <div className='flex justify-between  '>
-                <img src={item.image} alt="sample" width={100} height={100} />
+                <Image src={item.image} alt="sample" width={100} height={100} />
                 <div className='flex flex-col'>
                     <p className='font-semibold text-base'>{item.item_name}</p>
                     <p className='text-sm'>Medium | Hand Tossed</p>

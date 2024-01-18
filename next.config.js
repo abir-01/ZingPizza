@@ -8,7 +8,14 @@ const nextConfig = {
                 port: '',
                 pathname: '/u/**',
             },
+            {
+                protocol: 'https',
+                hostname: 'images.dominos.co.in',
+                port: '',
+                pathname: '/u/**',
+            },
         ],
+        domains: ['images.dominos.co.in']
     },
     async headers() {
         return [

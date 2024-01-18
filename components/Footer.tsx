@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import logo from "../public/logo.png"
+import Link from 'next/link'
 
 const Footer = () => {
     return (
@@ -12,25 +13,25 @@ const Footer = () => {
                         <h2 className="title-font  text-gray-600 font-semibold tracking-widest text-xl mb-3  text-center">MENU</h2>
                         <nav className="list-none mb-10 text-center">
                             <li className='my-4'>
-                                <a className="text-white ">Veg Pizza</a>
+                                <Link href="" className="text-white ">Veg Pizza</Link>
                             </li>
                             <li className='my-4'>
-                                <a className="text-white ">Chicken Pizza</a>
+                                <Link href="" className="text-white ">Chicken Pizza</Link>
                             </li>
                             <li className='my-4'>
-                                <a className="text-white ">Pasta</a>
+                                <Link href="" className="text-white ">Pasta</Link>
                             </li>
                             <li className='my-4'>
-                                <a className="text-white ">Pizza Crust</a>
+                                <Link href="" className="text-white ">Pizza Crust</Link>
                             </li>
                             <li className='my-4'>
-                                <a className="text-white ">Beverages</a>
+                                <Link href="" className="text-white ">Beverages</Link>
                             </li>
                             <li className='my-4'>
-                                <a className="text-white ">Pizza Mania</a>
+                                <Link href="" className="text-white ">Pizza Mania</Link>
                             </li>
                             <li className='my-4'>
-                                <a className="text-white ">Burger Pizza</a>
+                                <Link href="" className="text-white ">Burger Pizza</Link>
                             </li>
                         </nav>
                     </div>
@@ -38,16 +39,16 @@ const Footer = () => {
                         <h2 className="title-font  text-gray-600 font-semibold tracking-widest text-xl mb-3 text-center">COMPANY</h2>
                         <nav className="list-none mb-10 text-center">
                             <li className='my-4'>
-                                <a className="text-white">First Link</a>
+                                <Link href="" className="text-white">First Link</Link>
                             </li>
                             <li className='my-4'>
-                                <a className="text-white">Second Link</a>
+                                <Link href="" className="text-white">Second Link</Link>
                             </li>
                             <li className='my-4'>
-                                <a className="text-white">Third Link</a>
+                                <Link href="" className="text-white">Third Link</Link>
                             </li>
                             <li className='my-4'>
-                                <a className="text-white">Fourth Link</a>
+                                <Link href="" className="text-white">Fourth Link</Link>
                             </li>
                         </nav>
                     </div>
@@ -55,16 +56,16 @@ const Footer = () => {
                         <h2 className="title-font  text-gray-600 font-semibold tracking-widest text-xl mb-3 text-center">PIZZA RESTAURANTS</h2>
                         <nav className="list-none mb-10 text-center">
                             <li className='my-4'>
-                                <a className="text-white">First Link</a>
+                                <Link href="" className="text-white">First Link</Link>
                             </li>
                             <li className='my-4'>
-                                <a className="text-white">Second Link</a>
+                                <Link href="" className="text-white">Second Link</Link>
                             </li>
                             <li className='my-4'>
-                                <a className="text-white">Third Link</a>
+                                <Link href="" className="text-white">Third Link</Link>
                             </li>
                             <li className='my-4'>
-                                <a className="text-white">Fourth Link</a>
+                                <Link href="" className="text-white">Fourth Link</Link>
                             </li>
                         </nav>
                     </div>
@@ -72,16 +73,16 @@ const Footer = () => {
                         <h2 className="title-font  text-gray-600 font-semibold tracking-widest text-xl mb-3 text-center">ABOUT</h2>
                         <nav className="list-none mb-10 text-center">
                             <li className='my-4'>
-                                <a className="text-white">First Link</a>
+                                <Link href="" className="text-white">First Link</Link>
                             </li>
                             <li className='my-4'>
-                                <a className="text-white">Second Link</a>
+                                <Link href="" className="text-white">Second Link</Link>
                             </li>
                             <li className='my-4'>
-                                <a className="text-white">Third Link</a>
+                                <Link href="" className="text-white">Third Link</Link>
                             </li>
                             <li className='my-4'>
-                                <a className="text-white">Fourth Link</a>
+                                <Link href="" className="text-white">Fourth Link</Link>
                             </li>
                         </nav>
                     </div>
@@ -89,16 +90,16 @@ const Footer = () => {
                         <h2 className="title-font  text-gray-600 font-semibold tracking-widest text-xl mb-3 text-center">LEGAL</h2>
                         <nav className="list-none mb-10 text-center">
                             <li className='my-4'>
-                                <a className="text-white">First Link</a>
+                                <Link href="" className="text-white">First Link</Link>
                             </li>
                             <li className='my-4'>
-                                <a className="text-white">Second Link</a>
+                                <Link href="" className="text-white">Second Link</Link>
                             </li>
                             <li className='my-4'>
-                                <a className="text-white">Third Link</a>
+                                <Link href="" className="text-white">Third Link</Link>
                             </li>
                             <li className='my-4'>
-                                <a className="text-white">Fourth Link</a>
+                                <Link href="" className="text-white">Fourth Link</Link>
                             </li>
                         </nav>
                     </div>
