@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useEffect, useState } from 'react'
 import cartimage from '@/public/CartImage.png'
 import Image from 'next/image'
@@ -49,10 +51,10 @@ const Cart = () => {
 
     return (
 
-        <div className='w-1/4 h-[70vh] bg-white flex flex-col overflow-scroll items-center shadow-[0_3px_10px_rgb(0,0,0,0.2)] fixed right-5 '>
+        <div className='w-1/4 h-[70vh] bg-white flex flex-col overflow-scroll items-center shadow-[0_3px_10px_rgb(0,0,0,0.2)] fixed right-5 no-scrollbar'>
             <div className='bg-green-500 h-[10px] w-full'></div>
             <div className="text-2xl font-bold text-center my-4 underline">CART</div>
-            <div className='w-full'>
+            <div className='w-full '>
                 {
                     cartmenu?.map((menu:any, i:any) => (
                         <CartItem item={menu} key={i} />

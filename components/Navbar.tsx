@@ -20,7 +20,7 @@ const Navbar = ({ session }: any) => {
                     <Image src={logo} alt="logo" height={60} width={200}></Image>
                 </Link>
                 <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base font-bold justify-center">
-                    <Link href="/menu" className="mr-5 hover:text-gray-900">Our Menu</Link>
+                    <Link prefetch href="/menu" className="mr-5 hover:text-gray-900">Our Menu</Link>
                     <Link href="/corporate_enquiry" className="mr-5 hover:text-gray-900">Corporate Enquiry</Link>
                     <Link href="/" className="mr-5 hover:text-gray-900">Blogs</Link>
                     <Link href="/contact" className="mr-5 hover:text-gray-900">Contact Us</Link>
