@@ -11,6 +11,8 @@ import { options } from "./api/auth/[...nextauth]/options"
 import { getServerSession } from "next-auth/next"
 import SessionProvider from "@/utils/SessionProvider";
 import { ApolloWrapper } from "@/graphql/index";
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -43,6 +45,8 @@ export default async function RootLayout(
               <SessionProvider session={session}>
                 <Navbar session={session} />
                 {children}
+                <Analytics/>
+                <SpeedInsights/>
                 <Footer />
               </SessionProvider>
             </ApolloWrapper>
